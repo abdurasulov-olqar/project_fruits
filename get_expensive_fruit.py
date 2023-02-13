@@ -8,6 +8,16 @@ def get_expensive_fruit(data: str) -> str:
         str: name of the most expensive fruit
     """
     # your code here
-    return  
+    data = data.split('\n')
+    meva = []
+    narxi = []
+    for i in data[1:-1]:
+        meva.append(i.split(',')[0])
+        narxi.append(float(i.split(',')[1]))
+    return meva[narxi.index(max(narxi))]
+
+f = open('fruits.csv').read()
+print(get_expensive_fruit(f))
+  
 
 
