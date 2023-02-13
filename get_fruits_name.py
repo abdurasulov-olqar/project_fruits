@@ -9,7 +9,7 @@ def get_frutis_name(data:str)->list:
     """
     data = data.split('\n')
     l = []
-    for i in data[1:]:
+    for i in data[1:-1]:
         l.append(i.split(',')[0])
     return l
 
