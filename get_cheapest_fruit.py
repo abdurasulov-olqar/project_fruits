@@ -8,4 +8,13 @@ def get_cheapest_fruit(data: str) -> str:
         str: name of the cheapest fruit
     """
     # your code here
-    pass
+    data = data.split('\n')
+    meva = []
+    narxi = []
+    for i in data[1:-1]:
+        meva.append(i.split(',')[0])
+        narxi.append(float(i.split(',')[1]))
+    return meva[narxi.index(min(narxi))]
+
+f = open('fruits.csv').read()
+print(get_cheapest_fruit(f))
