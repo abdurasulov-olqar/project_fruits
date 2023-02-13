@@ -12,7 +12,7 @@ def get_cheapest_fruit_id(data: str) -> int:
     narxi = []
     for i in data[1:-1]:
         narxi.append(float(i.split(',')[1]))
-    return narxi.index(min(narxi))
+    return narxi.index(min(narxi))+1
 
 f = open('fruits.csv').read()
 print(get_cheapest_fruit_id(f))
