@@ -7,6 +7,13 @@ def get_frutis_name(data:str)->list:
     returns:
         list: list of fruits names
     """
-    return
+    data = data.split('\n')
+    l = []
+    for i in data[1:]:
+        l.append(i.split(',')[0])
+    return l
+
+f = open('fruits.csv').read()
+print(get_frutis_name(f))
 
     
